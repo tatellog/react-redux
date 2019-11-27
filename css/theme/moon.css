@@ -294,3 +294,19 @@ body {
   font-size: 55px;
   font-weight: bold;
 }
+
+.list-section {
+  text-align: justify;
+}
+
+.max-size {
+  width: 120%;
+  font-size: 20px;
+}
+
+
+.max-height {
+  width: 120%;
+  font-size: 15px;
+  max-height: 700px !important;
+}

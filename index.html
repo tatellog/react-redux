@@ -40,10 +40,146 @@
 					</section>
 				</section>
 				<section data-transition data-background-color="rgba(110,152,227)" >
-					<h2 class="fragment fade-in-then-out" >It is a new development hope?</h2>
+					<h2 class="fragment fade-in-then-out" >Is it a new development hope?</h2>
 				</section>
 				<section data-background-transition="slide" data-background="assets/fw.png" data-background-size="100%" data-background-color="rgba(34, 36, 36)" ></section>
 				<section data-background-transition="slide" data-background="assets/react2.png" data-background-size="100%" data-background-color="rgba(17,17,17)" ></section>
+
+
+				<!-- React -->
+				<section id="react-first">
+					<section class="list-section">
+						<p class="fragment" data-fragment-index="1" >Component-Based, Reusable Components</p>
+						<p class="fragment" data-fragment-index="2">Unidirectional data flow.</p>
+						<p class="fragment" data-fragment-index="4">Work with any stack or framework.</p>
+						<p class="fragment" data-fragment-index="5">Declarative not Imperative.</p>
+						<p class="fragment" data-fragment-index="6">Easy to learn.</p>
+						<p class="fragment" data-fragment-index="7">Facebook.</p>
+					</section>
+
+					<section data-background-color="rgba(17,17,17)">
+						<h2>Declarative not Imperative</h2>
+						<section>
+							Declarative
+							<pre><code>
+	  <header>
+		<h1>Declarative Programming</h1>
+		<p>Sprinkle Declarative in your verbiage to sound smart</p>
+	  </header>
+							</code></pre>
+							Imperative
+							<pre><code>
+	  toggle = () => {
+            this.setState({
+              shown: !this.state.shown,
+              emptyValue:true
+            });
+          }
+							</code></pre>
+						</section>
+					</section>
+				</section>
+
+				<!-- Components -->
+				<section id="rect-components">
+					<section data-markdown data-transition data-background-color="rgba(110,152,227)">
+						<script type="text/template">
+							## Everything is a component
+
+							They are independent elements and can be reused.
+						</script>
+					</section>
+					<section data-background-color="rgba(17,17,17)">
+						Functional Component (State less)
+						<pre>
+							<code class="max-size">
+
+  const Toolbox = ({className,icon,onClickAction}) =>
+    (
+	  <button className={className} onClick={(e)=> onClickAction()} >
+	   	 <i className={icon}> </i>
+	  </button>
+    )
+							</code>
+						</pre>
+					</section>
+
+					<section data-background-color="rgba(17,17,17)">
+						Class Component (State Full)
+						<pre>
+							<code class="max-size">
+
+import React, { Component } from 'react';
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <img src={ Logo } alt="alligator.io logo" width="200" />
+        <Container>
+          <FunctionBasedForm />
+        </Container>
+      </div>
+    );
+  }
+}
+
+export default App;
+							</code>
+						</pre>
+					</section>
+				</section>
+
+				<section>
+					<section data-markdown data-transition data-background-color="rgba(110,152,227)">
+						<script type="text/template">
+							## State
+
+							One of the benefits class components have over functional components is access to component state.
+						</script>
+					</section>
+					<section data-background-color="rgba(17,17,17)">
+						setStae
+						<pre>
+							<code>
+
+ handleChange(e) {
+	this.setState({value : e.target.value})
+
+ }
+							</code>
+						</pre>
+					</section>
+
+					<section data-background-color="rgba(17,17,17)">
+						setStae
+						<pre>
+							<code class="max-height">
+class FlipCard extends React.Component {
+
+  state = {
+    isFlipped: false,
+    isClicked: false,
+  }
+
+  flipCard = () => {
+    this.setState({isFlipped: !this.state.isFlipped})
+  }
+
+  render () {
+  const {isFlipped} = this.state
+
+  return (
+      <div className="FlipCards FlipCards-scene" onClick={this.flipCard}>
+        <div className={classNames('FlipCards-card', {'FlipCards-card--isFlipped': isFlipped})}>
+          <h1>Is Flipped {isFlipped}</h1>
+        </div>
+      </div>)
+							</code>
+						</pre>
+					</section>
+				</section>
+
 
 				<!-- Redux -->
 				<section id="redux-first">
@@ -73,22 +209,12 @@
 						<div class="black-color-bold" data-transition="slide-in fade-out">And Now:</div>
 						<p class="black-color" data-transition="slide-in fade-out">A very scientific illustration.</p>
 					</section>
-					<section  data-transition data-background-color="rgba(110,152,227)"  >
-						<p class="white-color" data-transition="slide-in fade-out">We’re going to start by explaining
-							Redux outside of the context of React. </p>
-					</section>
-					<section data-background-color="rgba(59,73,90)" data-transition="slide">
-						<p class="white-color">The whole state tree of your application is kept in one store. </p>
-					</section>
-					<section data-background-color="rgba(59,73,90)" data-transition="slide">
-						<p class="white-color" >Just one plain old JavaScript object. </p>
-					</section>
-					<section data-background-color="rgba(59,73,90)" data-transition="slide-in fade-out">
-						<p class="white-color" >One does not simply modify the state tree.</p>
-					</section>
-					<section data-background-color="rgba(59,73,90)" data-transition="fade-in slide-out">
-						<p class="white-color" >Instead, we dispatch actions.</p>
-					</section>
+					<section data-background-transition="slide" data-background="assets/1.png" data-background-size="70%" data-background-color="rgba(255,255,255)" ></section>
+					<section data-background-transition="slide" data-background="assets/2.png" data-background-size="70%" data-background-color="rgba(255,255,255)" ></section>
+					<section data-background-transition="slide" data-background="assets/3.png" data-background-size="60%" data-background-color="rgba(255,255,255)" ></section>
+					<section data-background-transition="slide" data-background="assets/4.png" data-background-size="60%" data-background-color="rgba(255,255,255)" ></section>
+					<section data-background-transition="slide" data-background="assets/5.png" data-background-size="60%" data-background-color="rgba(255,255,255)" ></section>
+					<section data-background-transition="slide" data-background="assets/6.png" data-background-size="60%" data-background-color="rgba(255,255,255)" ></section>
 				</section>
 
 			</div>
