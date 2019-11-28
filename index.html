@@ -26,17 +26,17 @@
 		<div class="reveal">
 			<div class="slides">
 				<section id="title">
-					<section>
-						<h1>Tania Tello</h1>
-						<p class="fragment fade-up">Web UI  </p>
+					<section data-background-color="#2A363b">
+						<h1 class="pink-color">Tania Tello</h1>
+						<p class="fragment fade-up pink-color">Web UI  </p>
 						<p class="fragment highlight-current-green">Globant</p>
 					</section>
 				</section>
 				<section id="slide2">
-					<section>
+					<section data-background-transition="slide" data-background="assets/newHope.jpg" data-background-size="200%" data-background-color="rgba(34, 36, 36)" >
 						<h1>React + Redux</h1>
 						<p class="fragment fade-up">A new developer...  </p>
-						<div class="fragment fade-up"><h2 class="fragment shrink">hope</h2></div>
+						<div class="fragment fade-up"><p class="fragment">hope</p></div>
 					</section>
 				</section>
 				<section data-transition data-background-color="rgba(110,152,227)" >
@@ -47,7 +47,7 @@
 
 
 				<!-- React -->
-				<section id="react-first">
+				<section id="react-first" data-background-color="#2A363b">
 					<section class="list-section">
 						<p class="fragment" data-fragment-index="1" >Component-Based, Reusable Components</p>
 						<p class="fragment" data-fragment-index="2">Unidirectional data flow.</p>
@@ -57,8 +57,8 @@
 						<p class="fragment" data-fragment-index="7">Facebook.</p>
 					</section>
 
-					<section data-background-color="rgba(17,17,17)">
-						<h2>Declarative not Imperative</h2>
+					<section data-background-color="#2a363b">
+						<h2 class="pink-color">Declarative not Imperative</h2>
 						<section>
 							Declarative
 							<pre><code>
@@ -89,96 +89,25 @@
 							They are independent elements and can be reused.
 						</script>
 					</section>
-					<section data-background-color="rgba(17,17,17)">
+					<section data-background-color="#2A363b">
 						Functional Component (State less)
-						<pre>
-							<code class="max-size">
-
-  const Toolbox = ({className,icon,onClickAction}) =>
-    (
-	  <button className={className} onClick={(e)=> onClickAction()} >
-	   	 <i className={icon}> </i>
-	  </button>
-    )
-							</code>
-						</pre>
+						<iframe
+								src="https://carbon.now.sh/embed/?bg=rgba(171%2C184%2C195%2C0)&t=monokai&wt=none&l=jsx&ds=false&dsyoff=20px&dsblur=68px&wc=false&wa=true&pv=56px&ph=0px&ln=false&fl=1&fm=Droid%20Sans%20Mono&fs=18px&lh=202%25&si=false&es=4x&wm=false&code=const%2520Toolbox%2520%253D%2520(%257BclassName%252C%2520icon%252C%2520onClickAction%252C%2520disabled%252C%2520show%257D)%2520%253D%253E%2520%250A(%250A%2520%2520%253Cbutton%2520className%253D%257B%2560%2524%257Bshow%2520%253F%2520'hide-button'%2520%253A%2520''%257D%2560%257D%2520onClick%253D%257B()%2520%253D%253E%2520onClickAction()%257D%253E%250A%2520%2520%2520%2520%253Ci%2520className%253D%257B%2520%2560%2524%257Bicon%257D%2520%2520%2524%257Bdisabled%2520%253F%2520'disabled-theme'%2520%253A%2520''%257D%2560%257D%2520%252F%253E%250A%2520%2520%253C%252Fbutton%253E%250A)"
+								style="transform:scale(1.1); width:1024px; height:473px; border:0; overflow:hidden;"
+								sandbox="allow-scripts allow-same-origin">
+						</iframe>
 					</section>
 
-					<section data-background-color="rgba(17,17,17)">
+					<section data-background-color="#2A363b">
 						Class Component (State Full)
-						<pre>
-							<code class="max-size">
-
-import React, { Component } from 'react';
-
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <img src={ Logo } alt="alligator.io logo" width="200" />
-        <Container>
-          <FunctionBasedForm />
-        </Container>
-      </div>
-    );
-  }
-}
-
-export default App;
-							</code>
-						</pre>
+						<iframe
+								src="https://carbon.now.sh/embed/?bg=rgba(171%2C184%2C195%2C0)&t=monokai&wt=none&l=jsx&ds=false&dsyoff=20px&dsblur=68px&wc=false&wa=false&pv=56px&ph=0px&ln=false&fl=1&fm=Droid%20Sans%20Mono&fs=18px&lh=202%25&si=false&es=4x&wm=false&code=import%2520React%252C%2520%257B%2520Component%2520%257D%2520from%2520'react'%253B%250A%250Aclass%2520App%2520extends%2520Component%2520%257B%250A%2520%2520render()%2520%257B%250A%2520%2520%2520%2520return%2520(%250A%2520%2520%2520%2520%2520%2520%253Cdiv%2520classname%253D%2522App%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253Cimg%2520src%253D%2522%257B%2522%2520logo%253D%2522%2522%2520%257D%253D%2522%2522%2520%2520width%253D%2522200%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253Ccontainer%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cfunctionbasedform%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253C%252Ffunctionbasedform%253E%253C%252Fcontainer%253E%250A%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520)%253B%250A%2520%2520%257D%250A%257D%250Aexport%2520default%2520App%253B"
+								style="transform:scale(1); width:1124px; height:473px; border:0; overflow:hidden;"
+								sandbox="allow-scripts allow-same-origin">
+						</iframe>
 					</section>
 				</section>
 
-				<section>
-					<section data-markdown data-transition data-background-color="rgba(110,152,227)" class="white-only">
-						<script type="text/template">
-							## State
-
-							One of the benefits class components have over functional components is access to component state.
-						</script>
-					</section>
-					<section data-background-color="rgba(17,17,17)">
-						setStae
-						<pre>
-							<code>
-
- handleChange(e) {
-	this.setState({value : e.target.value})
-
- }
-							</code>
-						</pre>
-					</section>
-
-					<section data-background-color="rgba(17,17,17)">
-						setStae
-						<pre>
-							<code class="max-height">
-class FlipCard extends React.Component {
-
-  state = {
-    isFlipped: false,
-    isClicked: false,
-  }
-
-  flipCard = () => {
-    this.setState({isFlipped: !this.state.isFlipped})
-  }
-
-  render () {
-  const {isFlipped} = this.state
-
-  return (
-      <div className="FlipCards FlipCards-scene" onClick={this.flipCard}>
-        <div className={classNames('FlipCards-card', {'FlipCards-card--isFlipped': isFlipped})}>
-          <h1>Is Flipped {isFlipped}</h1>
-        </div>
-      </div>)
-							</code>
-						</pre>
-					</section>
-				</section>
 
 			<!-- State -->
 
@@ -191,89 +120,49 @@ class FlipCard extends React.Component {
 					</script>
 				</section>
 
-				<section data-background-color="rgba(154, 216, 237)" data-transition="slide-in fade-out">
-					<p class="white-color" >The main job of React is to take
-						your application state and turn it into DOM nodes</p>
+				<section data-markdown class="white-only" data-background-color="#99b1c8">
+					<script type="text/template" class="white-color">
+						The main job of React is to take
+						your application state and turn it into DOM nodes
+					</script>
 				</section>
 
-				<section data-background-color="rgba(154, 216, 237)" data-transition="slide-in fade-out" >
-					<p class="citations" ><p class="black-color-bold">Remember:</p> React is all about one-way data flow down the
-						component hierarchy. It may not be immediately clear which
-						component should own what state.
-						<strong>This is often the most
-							challenging part for newcomers to understand</strong></p>
+				<section data-transition="slide-in fade-out" data-background-color="#99b1c8">
+					<p data-transition="slide-in fade-out" class="letter-code white-color" >props vs state</p>
 				</section>
 
-				<section data-background-color="rgba(154, 216, 237)"  data-transition="slide-in fade-out" >
-					<p data-transition="slide-in fade-out" class="letter-code black-color" >props vs state</p>
+				<section data-markdown class="white-only" data-background-color="#99b1c8">
+					<script type="text/template" class="white-color">
+						State is created in the component and stays in the component. It can be passed to a children as its props.
+					</script>
 				</section>
 
-				<section data-background-color="rgba(59,73,90)" data-transition="slide-in fade-out">
-					<p class="black-color"  data-transition="slide-in fade-out">State is created in the component and stays in the component. It can be passed to a children as its props.</p>
+				<section data-background-color="rgba(235,196,69)" >
+					<p class="black-color" data-transition="slide-in fade-out"><strong>Time to DEMO</strong></p>
 				</section>
 
-				<section data-background-color="rgba(154, 216, 237)">
-					<pre>
-						<code>
-							class Counter extends Component {
-							state = { count: 0 }
-							render () {
-								const { count } = this.state
-								return (
-									<div>
-										<h2>This is my state: { count }</h2>
-										<DoubleCount count = {count} />
-									</div>
-								    )
-							    }
-						    }
-
-							class DoubleCount extends Component {
-							render () {
-								const { count } = this.props
-								return (
-							        <p>This is my props: { count }. </p>
-								    )
-							    }
-						    }
-
-						</code>
-					</pre>
-				</section>
-
-				<section data-background-color="rgba(154, 216, 237)" data-transition="slide-in fade-out">
+				<section  data-transition="slide-in fade-out" data-background-color="#99b1c8">
 					<p class="white-color"  data-transition="slide-in fade-out">All state is not created equal. </p>
 				</section>
 
-				<section class="list-section white-color" data-background-color="rgba(20, 171, 201)">
-					<h3 class="white-color">There are many kinds of state.</h3>
-					<p class="fragment" data-fragment-index="1"> <p class="black-color-bold">Model data : </p>The nouns in your application</p>
-					<p class="fragment" data-fragment-index="2">  View/UI state : Are those nouns sorted in ascending or descending order.</p>
-					<p class="fragment" data-fragment-index="4">  Session state : Is the user even logged in</p>
-					<p class="fragment" data-fragment-index="5">  Communication : Are we in the process of fetching the nouns from the server?</p>
-					<p class="fragment" data-fragment-index="6">  Location :Where are we in the application? Which nouns are we looking at?</p>
+				<section data-markdown class="white-only" data-background-color="#99b1c8">
+					<script type="text/template">
+						## There are many kinds of state.
+						<p class="fragment white-only list-section" data-fragment-index="1"> Model data : The nouns in your application</p>
+						<p class="fragment white-only list-section" data-fragment-index="2">  View/UI state : Are those nouns sorted in ascending or descending order.</p>
+						<p class="fragment white-only list-section" data-fragment-index="4">  Session state : Is the user even logged in</p>
+						<p class="fragment white-only list-section" data-fragment-index="5">  Communication : Are we in the process of fetching the nouns from the server?</p>
+						<p class="fragment white-only list-section" data-fragment-index="6">  Location :Where are we in the application? Which nouns are we looking at?</p>
+					</script>
 				</section>
 
-				<section data-background-color="rgba(154, 216, 237)" >
-					<p class="black-color" data-transition="slide-in fade-out"><strong>Ask yourself :</strong>Does a input field need
-						the same kind of state management as your model data?</p>
-				</section>
-
-				<section data-background-color="rgba(154, 216, 237)" >
-					<p class="black-color" data-transition="slide-in fade-out"><strong>Ask yourself :</strong>What about form validation?</p>
-				</section>
-
-				<section data-background-color="rgba(154, 216, 237)" >
-					<p class="black-color" data-transition="slide-in fade-out"><strong>Ask yourself :</strong>What about form validation?</p>
-				</section>
-
-				<section data-background-color="rgba(154, 216, 237)" >
-					<p class="black-color" data-transition="slide-in fade-out"><strong>Ask yourself :</strong>Does it make sense to store all of your data in one place or compartmentalize it?</p>
+				<section data-background-color="#99b1c8" >
+					<p class="white-color" data-transition="slide-in fade-out"><strong>Ask yourself :</strong>Does it make sense to store all of your data in one place or compartmentalize it?</p>
 				</section>
 
 
-				<section data-transition="zoom" data-autoslide="5000">
-					<h1 class="greeting wow hinge">We need a state management tool!</h1>
+				<section data-transition="zoom" data-autoslide="5000" data-background-color="#99b1c8">
+					<h1 class="greeting wow hinge white-color">We need a state management tool!</h1>
 				</section>
 
 			</section>
@@ -284,114 +173,116 @@ class FlipCard extends React.Component {
 					<section data-background-color="rgba(59,73,90)" >
 						<h1 data-transition="slide-in fade-out">Redux</h1>
 					</section>
-					<section data-background-transition="slide" data-background="assets/fw.png" data-background-size="100%" data-background-color="rgba(34, 36, 36)" ></section>
-					<section data-background-transition="slide" data-background="assets/react2.png" data-background-size="100%" data-background-color="rgba(17,17,17)" ></section>
+					<section data-background-transition="slide" data-background="assets/rd.png" data-background-size="100%" data-background-color="rgba(34, 36, 36)" ></section>
+					<section data-background-transition="slide" data-background="assets/rd3.png" data-background-size="100%" data-background-color="rgba(17,17,17)" ></section>
 					<section  data-transition data-background-color="rgba(110,152,227)"  >
 						<p class="white-color" data-transition="slide-in fade-out">We’re going to start by explaining
 							Redux outside of the context of React. </p>
 					</section>
-					<section data-background-color="rgba(59,73,90)" data-transition="slide">
-						<p class="white-color"> <strong>Redux is</strong> a predictable state container for JavaScript applications that helps us to write applications that behave consistently, run in different environments, and are easy to test.</p>
-					</section>
-					<section data-background-color="rgba(17,17,17)">
-						One disadvantage of prop drilling is the need for writing a considerable amount of extra code in order to access data from a top-level component
-						<pre>
-							<code>
-								prop drilling example
-							</code>
-						</pre>
+
+					<section data-markdown data-transition data-background-color="#dec3c3">
+						<script type="text/template">
+							## FLUX
+
+							"Flux eschews MVC in favor of a unidirectional data flow"  <!-- .element: class="gray"  -->
+						</script>
 					</section>
 
-					<section data-markdown data-transition data-background-color="rgba(245, 247, 247)" class="black-color">
+					<section data-markdown data-transition data-background-color="#dec3c3">
+						<script type="text/template">
+							## BEFORE
+
+							<img src="/assets/mvc.png"  height="80%" width="50%">
+						</script>
+					</section>
+
+					<section data-markdown data-transition data-background-color="#dec3c3">
+						<script type="text/template">
+							## AFTER
+
+							<img src="/assets/flux.png"  height="100%" width="200%">
+
+							Unidirectional data flow  <!-- .element: class="gray"  -->
+
+						</script>
+					</section>
+
+					<section data-markdown data-transition data-background-color="#dec3c3">
 						<script type="text/template">
 							## The Redux principle #1
 
-							ONE application STATE OBJECT managed by ONE STORE
+							ONE application STATE OBJECT managed by ONE STORE  <!-- .element: class="gray"  -->
 						</script>
 					</section>
 
-					<section data-background-color="rgba(59,73,90)" data-transition="slide">
-						The store is where the application’s state is housed. There is only one store in any Redux application:
-						<pre>
-							<code>
-								import { createStore } from 'redux'
+					<section data-markdown data-transition data-background-color="#c2a6aa">
+						<script type="text/template">
+							The store is where the application’s state is housed. There is only one store in any Redux application: <!-- .element: class="pink-color-1"  -->
 
-								const store = createStore(componentName)
-							</code>
-						</pre>
+							<iframe
+									src="https://carbon.now.sh/embed/?bg=rgba(171%2C184%2C195%2C0)&t=monokai&wt=none&l=jsx&ds=false&dsyoff=20px&dsblur=68px&wc=false&wa=false&pv=56px&ph=0px&ln=false&fl=1&fm=Droid%20Sans%20Mono&fs=18px&lh=160%25&si=false&es=4x&wm=false&code=import%2520%257B%2520createStore%2520%257D%2520from%2520'redux'%250A%250Aconst%2520store%2520%253D%2520createStore(componentName)"
+									style="transform:scale(1.2); width:1024px; height:473px; border:0; overflow:hidden;"
+									sandbox="allow-scripts allow-same-origin">
+							</iframe>
+						</script>
 					</section>
 
-					<section data-markdown data-transition data-background-color="rgba(245, 247, 247)" class="black-color">
+					<section data-markdown data-transition data-background-color="#dec3c3">
 						<script type="text/template">
 							## The Redux principle #2
 
-							The only way to change the state is to emit an action, an object describing what happened
+							The only way to change the state is to emit an action, an object describing what happened <!-- .element: class="gray"  -->
 						</script>
 					</section>
 
-					<section data-background-color="rgba(59,73,90)" data-transition="slide">
-						Actions are payloads of information that send data from your application to your store
-						<pre>
-							<code>
-								{
-								  type: "WHITHDRAW_MONEY"
-								  amount: "$10,000"
-								}
-							</code>
-						</pre>
+					<section data-markdown data-transition data-background-color="#c2a6aa">
+						<script type="text/template">
+							Actions are payloads of information that send data from your application to your store <!-- .element: class="pink-color-1"  -->
+
+							<iframe
+									src="https://carbon.now.sh/embed/?bg=rgba(171%2C184%2C195%2C0)&t=monokai&wt=none&l=jsx&ds=false&dsyoff=20px&dsblur=68px&wc=false&wa=false&pv=56px&ph=0px&ln=false&fl=1&fm=Droid%20Sans%20Mono&fs=18px&lh=160%25&si=false&es=2x&wm=false&code=%257B%250A%2520%2520type%253A%2520%2522WHITHDRAW_MONEY%2522%250A%2520%2520amount%253A%2520%2522%252410%252C000%2522%250A%257D"
+									style="transform:scale(1.2); width:1024px; height:473px; border:0; overflow:hidden;"
+									sandbox="allow-scripts allow-same-origin">
+							</iframe>
+						</script>
 					</section>
 
-					<section data-background-color="rgba(59,73,90)" data-transition="slide">
-						Action Creators are simply functions that help you create actions. That’s all. They are functions that return action objects.
-						<pre>
-							<code>
-								export function setTechnology (text) {
-									return {
-										type: "SET_TECHNOLOGY"
-								 		amount: "text"
-									}
-								}
+					<section data-markdown data-transition data-background-color="#c2a6aa">
+						<script type="text/template">
+							Action Creators are simply functions that help you create actions. That’s all. They are functions that return action objects.<!-- .element: class="pink-color-1"  -->
+							<iframe
+									src="https://carbon.now.sh/embed/?bg=rgba(171%2C184%2C195%2C0)&t=monokai&wt=none&l=jsx&ds=false&dsyoff=20px&dsblur=68px&wc=false&wa=false&pv=56px&ph=0px&ln=false&fl=1&fm=Droid%20Sans%20Mono&fs=18px&lh=160%25&si=false&es=2x&wm=false&code=export%2520function%2520setTechnology%2520(text)%2520%257B%250A%2520%2520return%2520%257B%250A%2520%2520%2520%2520type%253A%2520%2522SET_TECHNOLOGY%2522%250A%2520%2520%2520%2520amount%253A%2520%2522text%2522%250A%2520%2520%257D%250A%257D"
+									style="transform:scale(1.2); width:1024px; height:250px; border:0; overflow:hidden;"
+									sandbox="allow-scripts allow-same-origin">
+							</iframe>
 
-							</code>
-						</pre>
-
-						Using ES6/7:
-						<pre>
-							<code>
-								export const setTechnology = text => ({ type: "SET_TECHNOLOGY", text })
-							</code>
-						</pre>
+							Using ES6/7:  <!-- .element: class="pink-color-1"  -->
+							<iframe
+									src="https://carbon.now.sh/embed/?bg=rgba(171%2C184%2C195%2C0)&t=monokai&wt=none&l=jsx&ds=false&dsyoff=20px&dsblur=68px&wc=false&wa=false&pv=56px&ph=0px&ln=false&fl=1&fm=Droid%20Sans%20Mono&fs=18px&lh=160%25&si=false&es=2x&wm=false&code=export%2520const%2520setTechnology%2520%253D%2520text%2520%253D%253E%2520(%257B%2520type%253A%2520%2522SET_TECHNOLOGY%2522%252C%2520text%2520%257D)"
+									style="transform:scale(1.2); width:1024px; height:173px; border:0; overflow:hidden;"
+									sandbox="allow-scripts allow-same-origin">
+							</iframe>
+						</script>
 					</section>
 
-					<section data-markdown data-transition data-background-color="rgba(245, 247, 247)" class="black-color">
+					<section data-markdown data-transition data-background-color="#dec3c3">
 						<script type="text/template">
 							## The Redux principle #3
 
-							To specify how the state tree is transformed by actions, you write pure reducers.
+							To specify how the state tree is transformed by actions, you write pure reducers. <!-- .element: class="gray"  -->
 						</script>
 					</section>
 
-					<section data-background-color="rgba(59,73,90)" data-transition="slide">
-						Reducers specify how the application's state changes in response to actions sent to the store.
-						<pre>
-							<code>
-								export let confirmationReducer = (state = {}, {type, confirmation}) => {
-									  switch (type) {
-									  case CONFIRMATION_RECEIVED:
-										return confirmation
-									  default:
-										return state
-									  }
-									}
-							</code>
-						</pre>
+					<section data-markdown data-transition data-background-color="#c2a6aa">
+						<script type="text/template">
+							Reducers specify how the application's state changes in response to actions sent to the store.  <!-- .element: class="pink-color-1"  -->
 
-						Using ES6/7:
-						<pre>
-							<code>
-								export const setTechnology = text => ({ type: "SET_TECHNOLOGY", text })
-							</code>
-						</pre>
+							<iframe
+									src="https://carbon.now.sh/embed/?bg=rgba(171%2C184%2C195%2C0)&t=monokai&wt=none&l=jsx&ds=false&dsyoff=20px&dsblur=68px&wc=false&wa=false&pv=56px&ph=0px&ln=false&fl=1&fm=Droid%20Sans%20Mono&fs=18px&lh=160%25&si=false&es=2x&wm=false&code=export%2520let%2520technologyReducer%2520%253D%2520(state%2520%253D%2520%257B%257D%252C%2520%257Btype%252C%2520frontEnd%257D)%2520%253D%253E%2520%257B%250A%2520%2520switch%2520(type)%2520%257B%250A%2520%2520case%2520FRONT_END%253A%250A%2520%2520%2520%2520return%2520frontEnd%250A%2520%2520default%253A%250A%2520%2520%2520%2520return%2520state%250A%2520%2520%257D%250A%257D"
+									style="transform:scale(1.2); width:1124px; height:373px; border:0; overflow:hidden;"
+									sandbox="allow-scripts allow-same-origin">
+							</iframe>
+						</script>
 					</section>
 				</section>
 
@@ -415,8 +306,97 @@ class FlipCard extends React.Component {
 					<h1 data-transition="slide-in fade-out">React and Redux</h1>
 				</section>
 
-				<section data-background-color="rgba(154, 216, 237)" >
-					<p class="black-color" data-transition="slide-in fade-out">Should I put stuff in the Redux store?</p>
+				<section class="list-section" data-background-color="#faa08c">
+					<h2 class="black-color-bold">We’re going to do that thing again</h2>
+					<p class="fragment black-color-1" data-fragment-index="1" >I’m going to code up a quick example using Redux and
+						React. </p>
+					<p class="fragment black-color-1" data-fragment-index="2">Then I’m going to explain the moving pieces once you’ve
+						seen it in action.</p>
+				</section>
+
+				<section data-background-color="rgba(235,196,69)" >
+					<p class="black-color" data-transition="slide-in fade-out"><strong>react-redux</strong></p>
+				</section>
+
+				<section class="list-section" data-background-color="#faa08c">
+					<h2 >Demo</h2>
+					<p class="fragment black-color-1" data-fragment-index="1" >Clone and install https://github.com/tatellog/example-counter.git</p>
+					<p class="fragment black-color-1" data-fragment-index="2">I added the ability to increment and decrement the counter using react-redux. </p>
+				</section>
+
+				<section data-markdown data-transition data-background-color="#faa08c" >
+					<script type="text/template">
+							 Good news! The react-redux library is also super small  <!-- .element: class="white-color"  -->
+					</script>
+				</section>
+
+				<section data-markdown data-transition data-background-color="rgba(110,152,227)" class="white-only">
+					<script type="text/template">
+						## < Provider />
+
+						## connect ()
+					</script>
+				</section>
+
+				<section data-background-color="rgba(235,196,69)" >
+					<p class="black-color" data-transition="slide-in fade-out"> This is all very cool, but where is the store
+						and how does <strong class="black-color-bold">connect()</strong > know about it?</p>
+				</section>
+
+				<section data-markdown data-transition data-background-color="#c2a6aa" data-separator="^\n\n\n">
+					<script type="text/template">
+						It’s the higher-order component pattern! <!-- .element: class="pink-color-1"  -->
+
+						Pick which things you want from the store. <!-- .element: class="pink-color-1"  -->
+
+						(Maybe transform the data if you need to.) <!-- .element: class="pink-color-1"  -->
+
+						<iframe
+								src="https://carbon.now.sh/embed/?bg=rgba(171%2C184%2C195%2C0)&t=monokai&wt=none&l=jsx&ds=false&dsyoff=20px&dsblur=68px&wc=false&wa=false&pv=56px&ph=0px&ln=false&fl=1&fm=Droid%20Sans%20Mono&fs=18px&lh=160%25&si=false&es=2x&wm=false&code=connect(mapStateToProps%252C%2520mapDispatchToProps)(WrappedComponent)%253B"
+								style="transform:scale(1); width:1024px; height:173px; border:0; overflow:hidden;"
+								sandbox="allow-scripts allow-same-origin">
+						</iframe>
+
+						Pick which actions this component needs.  <!-- .element: class="pink-color-1"  -->
+
+						Mix these two together and pass them as props to a presentational component  <!-- .element: class="pink-color-1"  -->
+
+					</script>
+				</section>
+
+				<section data-markdown data-transition data-background-color="#c2a6aa">
+					<script type="text/template">
+						A function that receives store.dispatch and then <!-- .element: class="pink-color-1"  -->
+						returns an object with methods that will call dispatch. <!-- .element: class="pink-color-1"  -->
+
+						<iframe
+								src="https://carbon.now.sh/embed/?bg=rgba(171%2C184%2C195%2C0)&t=monokai&wt=none&l=jsx&ds=false&dsyoff=20px&dsblur=68px&wc=false&wa=false&pv=56px&ph=0px&ln=false&fl=1&fm=Droid%20Sans%20Mono&fs=18px&lh=160%25&si=false&es=2x&wm=false&code=const%2520mapDispatchToProps%2520%253D%2520(dispatch)%2520%253D%253E%2520%257B%250A%2520%2520return%2520%257B%250A%2520%2520%2520%2520increment()%2520%257B%2520dispatch(increment())%2520%257D%252C%250A%2520%2520%2520%2520decrement()%2520%257B%2520dispatch(decrement())%2520%257D%250A%2520%257D%250A%257D%253B"
+								style="transform:scale(1); width:1024px; height:473px; border:0; overflow:hidden;"
+								sandbox="allow-scripts allow-same-origin">
+						</iframe>
+					</script>
+				</section>
+
+				<section data-markdown data-transition data-background-color="#c2a6aa" >
+					<script type="text/template">
+						This is a function that you make that takes the entire state <!-- .element: class="pink-color-1"  -->
+						tree and boils it down to just what your components needs. <!-- .element: class="pink-color-1"  -->
+
+						<iframe
+								src="https://carbon.now.sh/embed/?bg=rgba(171%2C184%2C195%2C0)&t=monokai&wt=none&l=jsx&ds=false&dsyoff=20px&dsblur=68px&wc=false&wa=false&pv=56px&ph=0px&ln=false&fl=1&fm=Droid%20Sans%20Mono&fs=18px&lh=160%25&si=false&es=2x&wm=false&code=const%2520mapStateToProps%2520%253D%2520(state)%2520%253D%253E%2520%257B%250A%2520return%2520%257B%250A%2520%2520%2520items%253A%2520state.items%250A%2520%257D%250A%257D%253B"
+								style="transform:scale(1.2); width:1024px; height:473px; border:0; overflow:hidden;"
+								sandbox="allow-scripts allow-same-origin">
+						</iframe>
+					</script>
+				</section>
+
+				<section data-background-color="rgba(235,196,69)" >
+					<p class="black-color-bold" data-transition="slide-in fade-out"> QUESTIONS</p>
+				</section>
+
+				<section data-background-color="rgba(235,196,69)" >
+					<p class="black-color-bold" data-transition="slide-in fade-out"> Thank you for your attention!!!! </p>
+					<p class="black-color-1" data-transition="slide-in fade-out"> tania.tello@globant.com</p>
 				</section>
 			</section>
 

@@ -291,6 +291,10 @@ body {
   color: #050606;
   font-size: 55px;
 }
+
+.black-color-1 {
+  color: #050606 !important;
+}
 .black-color-bold {
   color: #050606;
   font-size: 55px;
@@ -298,9 +302,21 @@ body {
 }
 
 .list-section {
-  text-align: justify;
-  color: white;
+  color: rgb(207, 210, 211);
   font-size: 35px;
+  text-align: left;
+}
+
+.pink-color {
+  color: rgb(207, 210, 211) !important;
+}
+
+.pink-color-1 {
+  color: rgb(223, 245, 245) !important;
+}
+
+.gray {
+  color: rgba(115, 116, 128, 0.66) !important;
 }
 
 .max-size {
