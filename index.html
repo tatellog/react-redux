@@ -62,10 +62,10 @@
 						<section>
 							Declarative
 							<pre><code>
-	  <header>
-		<h1>Declarative Programming</h1>
-		<p>Sprinkle Declarative in your verbiage to sound smart</p>
-	  </header>
+	<header>
+      <h1>Declarative Programming</h1>
+	  <p>Sprinkle Declarative in your verbiage to sound smart</p>
+	</header>
 							</code></pre>
 							Imperative
 							<pre><code>
@@ -273,13 +273,43 @@
 						</script>
 					</section>
 
+					<section data-background-color="rgba(235,196,69)" >
+						<p class="black-color" data-transition="slide-in fade-out"><strong>Pure vs. Impure Functions</strong></p>
+					</section>
+
+					<section data-markdown data-transition data-background-color="#c2a6aa">
+						<script type="text/template">
+							Pure functions take arguments and return values based on those arguments. <!-- .element: class="pink-color-1"  -->
+						</script>
+					</section>
+
+					<section data-markdown data-transition data-background-color="#c2a6aa">
+						<script type="text/template">
+							Impure functions an mutate things from outside their scope or produce side effects. <!-- .element: class="pink-color-1"  -->
+						</script>
+					</section>
+
+					<section data-markdown data-transition data-background-color="#c2a6aa">
+						<script type="text/template">
+							<img src="/assets/pure.png"  height="100%" width="200%">
+						</script>
+					</section>
+
+					<section data-markdown data-transition data-background-color="#c2a6aa">
+						<script type="text/template">
+							<img src="/assets/impure.png"  height="100%" width="200%">
+						</script>
+					</section>
+
+					</section>
+
 					<section data-markdown data-transition data-background-color="#c2a6aa">
 						<script type="text/template">
 							Reducers specify how the application's state changes in response to actions sent to the store.  <!-- .element: class="pink-color-1"  -->
 
 							<iframe
 									src="https://carbon.now.sh/embed/?bg=rgba(171%2C184%2C195%2C0)&t=monokai&wt=none&l=jsx&ds=false&dsyoff=20px&dsblur=68px&wc=false&wa=false&pv=56px&ph=0px&ln=false&fl=1&fm=Droid%20Sans%20Mono&fs=18px&lh=160%25&si=false&es=2x&wm=false&code=export%2520let%2520technologyReducer%2520%253D%2520(state%2520%253D%2520%257B%257D%252C%2520%257Btype%252C%2520frontEnd%257D)%2520%253D%253E%2520%257B%250A%2520%2520switch%2520(type)%2520%257B%250A%2520%2520case%2520FRONT_END%253A%250A%2520%2520%2520%2520return%2520frontEnd%250A%2520%2520default%253A%250A%2520%2520%2520%2520return%2520state%250A%2520%2520%257D%250A%257D"
-									style="transform:scale(1.2); width:1124px; height:373px; border:0; overflow:hidden;"
+									style="transform:scale(1); width:1024px; height:473px; border:0; overflow:hidden;"
 									sandbox="allow-scripts allow-same-origin">
 							</iframe>
 						</script>
@@ -388,6 +418,10 @@
 								sandbox="allow-scripts allow-same-origin">
 						</iframe>
 					</script>
+				</section>
+
+				<section  data-transition data-background-color="rgba(110,152,227)"  >
+					<p class="white-color" data-transition="slide-in fade-out"><strong>CONCLUSION</strong> </p>
 				</section>
 
 				<section data-background-color="rgba(235,196,69)" >
