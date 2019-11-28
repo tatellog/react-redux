@@ -82,7 +82,7 @@
 
 				<!-- Components -->
 				<section id="rect-components">
-					<section data-markdown data-transition data-background-color="rgba(110,152,227)">
+					<section data-markdown data-transition data-background-color="rgba(110,152,227)" class="white-only">
 						<script type="text/template">
 							## Everything is a component
 
@@ -131,7 +131,7 @@ export default App;
 				</section>
 
 				<section>
-					<section data-markdown data-transition data-background-color="rgba(110,152,227)">
+					<section data-markdown data-transition data-background-color="rgba(110,152,227)" class="white-only">
 						<script type="text/template">
 							## State
 
@@ -180,34 +180,224 @@ class FlipCard extends React.Component {
 					</section>
 				</section>
 
+			<!-- State -->
+
+			<section id="state">
+				<section data-markdown data-transition data-background-color="rgba(110,152,227)" class="white-only">
+					<script type="text/template">
+						## Part One
+
+						Understanding the State
+					</script>
+				</section>
+
+				<section data-background-color="rgba(154, 216, 237)" data-transition="slide-in fade-out">
+					<p class="white-color" >The main job of React is to take
+						your application state and turn it into DOM nodes</p>
+				</section>
+
+				<section data-background-color="rgba(154, 216, 237)" data-transition="slide-in fade-out" >
+					<p class="citations" ><p class="black-color-bold">Remember:</p> React is all about one-way data flow down the
+						component hierarchy. It may not be immediately clear which
+						component should own what state.
+						<strong>This is often the most
+							challenging part for newcomers to understand</strong></p>
+				</section>
+
+				<section data-background-color="rgba(154, 216, 237)"  data-transition="slide-in fade-out" >
+					<p data-transition="slide-in fade-out" class="letter-code black-color" >props vs state</p>
+				</section>
+
+				<section data-background-color="rgba(59,73,90)" data-transition="slide-in fade-out">
+					<p class="black-color"  data-transition="slide-in fade-out">State is created in the component and stays in the component. It can be passed to a children as its props.</p>
+				</section>
+
+				<section data-background-color="rgba(154, 216, 237)">
+					<pre>
+						<code>
+							class Counter extends Component {
+							state = { count: 0 }
+							render () {
+								const { count } = this.state
+								return (
+									<div>
+										<h2>This is my state: { count }</h2>
+										<DoubleCount count = {count} />
+									</div>
+								    )
+							    }
+						    }
+
+							class DoubleCount extends Component {
+							render () {
+								const { count } = this.props
+								return (
+							        <p>This is my props: { count }. </p>
+								    )
+							    }
+						    }
+
+						</code>
+					</pre>
+				</section>
+
+				<section data-background-color="rgba(154, 216, 237)" data-transition="slide-in fade-out">
+					<p class="white-color"  data-transition="slide-in fade-out">All state is not created equal. </p>
+				</section>
+
+				<section class="list-section white-color" data-background-color="rgba(20, 171, 201)">
+					<h3 class="white-color">There are many kinds of state.</h3>
+					<p class="fragment" data-fragment-index="1"> <p class="black-color-bold">Model data : </p>The nouns in your application</p>
+					<p class="fragment" data-fragment-index="2">  View/UI state : Are those nouns sorted in ascending or descending order.</p>
+					<p class="fragment" data-fragment-index="4">  Session state : Is the user even logged in</p>
+					<p class="fragment" data-fragment-index="5">  Communication : Are we in the process of fetching the nouns from the server?</p>
+					<p class="fragment" data-fragment-index="6">  Location :Where are we in the application? Which nouns are we looking at?</p>
+				</section>
+
+				<section data-background-color="rgba(154, 216, 237)" >
+					<p class="black-color" data-transition="slide-in fade-out"><strong>Ask yourself :</strong>Does a input field need
+						the same kind of state management as your model data?</p>
+				</section>
+
+				<section data-background-color="rgba(154, 216, 237)" >
+					<p class="black-color" data-transition="slide-in fade-out"><strong>Ask yourself :</strong>What about form validation?</p>
+				</section>
+
+				<section data-background-color="rgba(154, 216, 237)" >
+					<p class="black-color" data-transition="slide-in fade-out"><strong>Ask yourself :</strong>What about form validation?</p>
+				</section>
+
+				<section data-background-color="rgba(154, 216, 237)" >
+					<p class="black-color" data-transition="slide-in fade-out"><strong>Ask yourself :</strong>Does it make sense to store all of your data in one place or compartmentalize it?</p>
+				</section>
+
+
+				<section data-transition="zoom" data-autoslide="5000">
+					<h1 class="greeting wow hinge">We need a state management tool!</h1>
+				</section>
+
+			</section>
+
 
 				<!-- Redux -->
 				<section id="redux-first">
 					<section data-background-color="rgba(59,73,90)" >
-						<h1 data-transition="slide-in fade-out">Redux first steps</h1>
+						<h1 data-transition="slide-in fade-out">Redux</h1>
 					</section>
+					<section data-background-transition="slide" data-background="assets/fw.png" data-background-size="100%" data-background-color="rgba(34, 36, 36)" ></section>
+					<section data-background-transition="slide" data-background="assets/react2.png" data-background-size="100%" data-background-color="rgba(17,17,17)" ></section>
 					<section  data-transition data-background-color="rgba(110,152,227)"  >
 						<p class="white-color" data-transition="slide-in fade-out">We’re going to start by explaining
 							Redux outside of the context of React. </p>
 					</section>
 					<section data-background-color="rgba(59,73,90)" data-transition="slide">
-						<p class="white-color">The whole state tree of your application is kept in one store. </p>
+						<p class="white-color"> <strong>Redux is</strong> a predictable state container for JavaScript applications that helps us to write applications that behave consistently, run in different environments, and are easy to test.</p>
 					</section>
+					<section data-background-color="rgba(17,17,17)">
+						One disadvantage of prop drilling is the need for writing a considerable amount of extra code in order to access data from a top-level component
+						<pre>
+							<code>
+								prop drilling example
+							</code>
+						</pre>
+					</section>
+
+					<section data-markdown data-transition data-background-color="rgba(245, 247, 247)" class="black-color">
+						<script type="text/template">
+							## The Redux principle #1
+
+							ONE application STATE OBJECT managed by ONE STORE
+						</script>
+					</section>
+
 					<section data-background-color="rgba(59,73,90)" data-transition="slide">
-						<p class="white-color" >Just one plain old JavaScript object. </p>
+						The store is where the application’s state is housed. There is only one store in any Redux application:
+						<pre>
+							<code>
+								import { createStore } from 'redux'
+
+								const store = createStore(componentName)
+							</code>
+						</pre>
 					</section>
-					<section data-background-color="rgba(59,73,90)" data-transition="slide-in fade-out">
-						<p class="white-color" >One does not simply modify the state tree.</p>
+
+					<section data-markdown data-transition data-background-color="rgba(245, 247, 247)" class="black-color">
+						<script type="text/template">
+							## The Redux principle #2
+
+							The only way to change the state is to emit an action, an object describing what happened
+						</script>
 					</section>
-					<section data-background-color="rgba(59,73,90)" data-transition="fade-in slide-out">
-						<p class="white-color" >Instead, we dispatch actions.</p>
+
+					<section data-background-color="rgba(59,73,90)" data-transition="slide">
+						Actions are payloads of information that send data from your application to your store
+						<pre>
+							<code>
+								{
+								  type: "WHITHDRAW_MONEY"
+								  amount: "$10,000"
+								}
+							</code>
+						</pre>
+					</section>
+
+					<section data-background-color="rgba(59,73,90)" data-transition="slide">
+						Action Creators are simply functions that help you create actions. That’s all. They are functions that return action objects.
+						<pre>
+							<code>
+								export function setTechnology (text) {
+									return {
+										type: "SET_TECHNOLOGY"
+								 		amount: "text"
+									}
+								}
+
+							</code>
+						</pre>
+
+						Using ES6/7:
+						<pre>
+							<code>
+								export const setTechnology = text => ({ type: "SET_TECHNOLOGY", text })
+							</code>
+						</pre>
+					</section>
+
+					<section data-markdown data-transition data-background-color="rgba(245, 247, 247)" class="black-color">
+						<script type="text/template">
+							## The Redux principle #3
+
+							To specify how the state tree is transformed by actions, you write pure reducers.
+						</script>
+					</section>
+
+					<section data-background-color="rgba(59,73,90)" data-transition="slide">
+						Reducers specify how the application's state changes in response to actions sent to the store.
+						<pre>
+							<code>
+								export let confirmationReducer = (state = {}, {type, confirmation}) => {
+									  switch (type) {
+									  case CONFIRMATION_RECEIVED:
+										return confirmation
+									  default:
+										return state
+									  }
+									}
+							</code>
+						</pre>
+
+						Using ES6/7:
+						<pre>
+							<code>
+								export const setTechnology = text => ({ type: "SET_TECHNOLOGY", text })
+							</code>
+						</pre>
 					</section>
 				</section>
 
 				<section id="redux-second">
 					<section data-background-color="rgba(235,196,69)" >
-						<div class="black-color-bold" data-transition="slide-in fade-out">And Now:</div>
-						<p class="black-color" data-transition="slide-in fade-out">A very scientific illustration.</p>
+						<p class="black-color" data-transition="slide-in fade-out"><strong>And Now:</strong>A very scientific illustration.</p>
 					</section>
 					<section data-background-transition="slide" data-background="assets/1.png" data-background-size="70%" data-background-color="rgba(255,255,255)" ></section>
 					<section data-background-transition="slide" data-background="assets/2.png" data-background-size="70%" data-background-color="rgba(255,255,255)" ></section>
@@ -216,6 +406,20 @@ class FlipCard extends React.Component {
 					<section data-background-transition="slide" data-background="assets/5.png" data-background-size="60%" data-background-color="rgba(255,255,255)" ></section>
 					<section data-background-transition="slide" data-background="assets/6.png" data-background-size="60%" data-background-color="rgba(255,255,255)" ></section>
 				</section>
+
+
+
+			<!-- React + Redux -->
+			<section id="react-redux">
+				<section data-background-color="rgba(59,73,90)" >
+					<h1 data-transition="slide-in fade-out">React and Redux</h1>
+				</section>
+
+				<section data-background-color="rgba(154, 216, 237)" >
+					<p class="black-color" data-transition="slide-in fade-out">Should I put stuff in the Redux store?</p>
+				</section>
+			</section>
+
 
 			</div>
 		</div>
@@ -231,7 +435,8 @@ class FlipCard extends React.Component {
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true }
+					{ src: 'plugin/highlight/highlight.js', async: true },
+					{ src: 'plugin/sampler.js' }
 				]
 			});
 		</script>
